@@ -123,6 +123,15 @@ class StackPageView:UIView {
 }
 
 class PageView:UIView {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        clipsToBounds = true
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     var viewController:UIViewController?{
         didSet{
             let v = viewController?.view
