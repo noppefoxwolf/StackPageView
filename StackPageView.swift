@@ -45,13 +45,18 @@ class StackPageView:UIView {
         addGestureRecognizer(pan)
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        currentContainer.frame = bounds
+    }
+    
     func panAction(gesture:UIPanGestureRecognizer){
         let p = gesture.translationInView(self)
         if gesture.state == .Began {
             if let prev = dataSource?.stackViewPrev(currentContainer.viewController) {
                 parentViewController.addChildViewController(prev)
                 prevContainer = PageView()
-                prevContainer?.frame = bounds
+                prevContainer?.frame = currentContainer.bounds
                 prevContainer?.viewController = prev
                 prevContainer?.center = CGPointMake(bounds.width/2, -bounds.height/2)
                 addSubview(prevContainer!)
@@ -60,7 +65,7 @@ class StackPageView:UIView {
             if let next = dataSource?.stackViewNext(currentContainer.viewController) {
                 parentViewController.addChildViewController(next)
                 nextContainer = PageView()
-                nextContainer?.frame = bounds
+                nextContainer?.frame = currentContainer.bounds
                 nextContainer?.viewController = next
                 insertSubview(nextContainer!, belowSubview: currentContainer)
                 next.didMoveToParentViewController(parentViewController)

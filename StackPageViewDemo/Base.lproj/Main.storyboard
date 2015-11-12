@@ -18,21 +18,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ElZ-RI-1GS" customClass="StackPageView" customModule="StackPageViewDemo" customModuleProvider="target">
-                                <rect key="frame" x="180" y="145.5" width="240" height="309"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="309" id="0yo-Pi-hms"/>
                                     <constraint firstAttribute="width" constant="240" id="aoL-Z2-SsF"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0yo-Pi-hms"/>
+                                        <exclude reference="aoL-Z2-SsF"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ElZ-RI-1GS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QV2-hW-s7r"/>
+                            <constraint firstItem="ElZ-RI-1GS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ejv-dE-I2S"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ElZ-RI-1GS" secondAttribute="bottom" id="hWe-c0-dON"/>
+                            <constraint firstAttribute="trailing" secondItem="ElZ-RI-1GS" secondAttribute="trailing" id="nz7-WD-P6N"/>
+                            <constraint firstItem="ElZ-RI-1GS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="tua-e0-4Xc"/>
                             <constraint firstItem="ElZ-RI-1GS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vlD-ln-tAR"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="QV2-hW-s7r"/>
+                                <exclude reference="vlD-ln-tAR"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="stackPageView" destination="ElZ-RI-1GS" id="s5m-fP-eIw"/>
