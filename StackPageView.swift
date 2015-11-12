@@ -10,8 +10,8 @@ import UIKit
 
 
 protocol StackViewDataSource{
-    func stackViewPrev(currentViewController:UIViewController?)->UIViewController
-    func stackViewNext(currentViewController:UIViewController?)->UIViewController
+    func stackViewPrev(currentViewController:UIViewController?)->UIViewController?
+    func stackViewNext(currentViewController:UIViewController?)->UIViewController?
 }
 
 class StackPageView:UIView {

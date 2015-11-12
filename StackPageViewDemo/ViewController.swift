@@ -18,11 +18,11 @@ class ViewController: UIViewController,StackViewDataSource {
         stackPageView.parentViewController = self
     }
 
-    func stackViewNext(currentViewController: UIViewController?) -> UIViewController {
+    func stackViewNext(currentViewController: UIViewController?) -> UIViewController? {
         return DummyViewController()
     }
     
-    func stackViewPrev(currentViewController: UIViewController?) -> UIViewController {
+    func stackViewPrev(currentViewController: UIViewController?) -> UIViewController? {
         return DummyViewController()
     }
 
