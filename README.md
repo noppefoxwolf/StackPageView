@@ -2,7 +2,7 @@
 
 ![](https://raw.githubusercontent.com/noppefoxwolf/StackPageView/master/sample.gif)
 
-# Intstall
+# Install
 add StackPageView.swift your project.
 
 # How to Use
