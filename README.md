@@ -1,4 +1,5 @@
 # StackPageView
+Vertical page view with UIViewControllers stacked on the top of each other
 
 ![](https://raw.githubusercontent.com/noppefoxwolf/StackPageView/master/sample.gif)
 
